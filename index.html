@@ -11,12 +11,236 @@
         git command codes 
 
 
-        git --version            -> to check git version
-        git mkdir                -> to make new directory 
-        git cd                   -> to get enter 
-        git init                 -> to initialize empty git repository 
-        git status               -> to check the status that whats going on in git 
-        git 
+        git --version               -> to check git version
+        git mkdir                   -> to make new directory 
+        git cd                      -> to get enter 
+        git init                    -> to initialize empty git repository 
+        git status                  -> to check the status that whats going on in git 
+        git add index.html          -> to add file in staging area  
+        git commit                  -> to commit what you have done with code at that time
+        git log                     -> to get details for what we commit previously 
+        git chechout <#code>        -> to get back at the previous code  where we commit with particular hash code   
+        git checkout master         -> to get bach to that currently master main file 
+        git branch <branchname>     -> to create branch to don't disturb with others in running project 
+        git checkout <branch>       -> to get switch into branches  
+   git checkout -b name/branch name -> to get inside by creating new branch simultaneously 
+        git merge <branchname>      -> to merge branches to master 
+        touch.gitignore             -> to make a file in which we dont want to show code to others 
+        
+
+
+
+
+
+
+
+
+
+        branch concept - > to get shuffle between the different branches 
+
+
+
+
+
+
+        git --version
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice
+$ gir  --version
+bash: gir: command not found
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice
+$ mkdir gitpractice
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice
+$ cd gitpractice
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice
+$ git init
+Initialized empty Git repository in F:/code practice/gitpractice/.git/
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git init
+Reinitialized existing Git repository in F:/code practice/gitpractice/.git/
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git add practice.html
+fatal: pathspec 'practice.html' did not match any files
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git commit -m "initial commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git add index.html
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git add .
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git commit -m "adding index.html"
+[master (root-commit) ba5d2d7] adding index.html
+ 1 file changed, 22 insertions(+)
+ create mode 100644 index.html
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git log
+commit ba5d2d7fbf5ed63fc79e67b911cee355c430c4c1 (HEAD -> master)
+Author: psprince101gmail.com <psprince101@gmail.com>
+Date:   Fri Apr 15 12:21:24 2022 +0530
+
+    adding index.html
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$  git branch dev
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git branch
+  dev
+* master
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (master)
+$ git checkout -b pradeep/function
+Switched to a new branch 'pradeep/function'
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git status
+On branch pradeep/function
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git add function.html
+fatal: pathspec 'function.html' did not match any files
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git commit -m "add function"
+On branch pradeep/function
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git add func.html
+fatal: pathspec 'func.html' did not match any files
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git merge dev
+Already up to date.
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git c.heckout master
+git: 'c.heckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ checkout
+bash: checkout: command not found
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git checkout
+M       index.html
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git log
+commit ba5d2d7fbf5ed63fc79e67b911cee355c430c4c1 (HEAD -> pradeep/function, master, dev)
+Author: psprince101gmail.com <psprince101@gmail.com>
+Date:   Fri Apr 15 12:21:24 2022 +0530
+
+    adding index.html
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git remote -v
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ add origin https://github.com/psprince101/gitpractice.git
+bash: add: command not found
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git remote -v
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git remote add origin https://github.com/psprince101/gitpractice.git
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git remote -v
+origin  https://github.com/psprince101/gitpractice.git (fetch)
+origin  https://github.com/psprince101/gitpractice.git (push)
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/psprince101/gitpractice.git'
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (pradeep/function)
+$ git branch -M main
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 530 bytes | 530.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/psprince101/gitpractice.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Pradeep Singh@Its-Volcano MINGW64 /f/code practice/gitpractice (main)
+
+
      -->
+
+
+     
 </body>
 </html>
